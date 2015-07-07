@@ -1,0 +1,21 @@
+Source: libjs-font-awesome
+Section: web
+Priority: optional
+Maintainer: Vítězslav Dvořák <info@vitexsoftware.cz>
+Uploaders: Vitex <vitex@hippy.cz>
+Build-Depends: debhelper (>= 7.0.50~)
+Standards-Version: 3.9.4
+Homepage: https://github.com/Vitexus/libjs-font-awesome
+Vcs-Browser: https://github.com/Vitexus/libjs-font-awesome
+Vcs-Git: git@github.com:Vitexus/libjs-font-awesome.git
+
+Package: libjs-font-awesome
+Architecture: all
+Multi-Arch: foreign
+Breaks: movabletype-opensource (<< 5.1.4+dfsg-3~)
+Depends: ${misc:Depends}, fonts-font-awesome
+Recommends: javascript-common
+Description: The iconic font and CSS toolkit
+ Font Awesome gives you scalable vector icons that can instantly be 
+ customized — size, color, drop shadow, and anything that can be 
+ done with the power of CSS.
