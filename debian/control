@@ -13,7 +13,7 @@ Package: libjs-font-awesome
 Architecture: all
 Multi-Arch: foreign
 Breaks: movabletype-opensource (<< 5.1.4+dfsg-3~)
-Depends: ${misc:Depends}, fonts-font-awesome
+Depends: ${misc:Depends}, fonts-font-awesome, javascript-common
 Recommends: javascript-common
 Description: The iconic font and CSS toolkit
  Font Awesome gives you scalable vector icons that can instantly be 
