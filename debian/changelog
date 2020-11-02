@@ -1,8 +1,14 @@
-libjs-font-awesome (1-5) UNRELEASED; urgency=medium
+libjs-font-awesome (1-6) UNRELEASED; urgency=medium
 
   [ Vítězslav Vitex Dvořák ]
 
   [ dvorak ]
   * Debianized 1
 
- -- dvorak <dvorak@linuxadmin.austro-bohemia.local>  Tue, 07 Jul 2015 10:39:21 +0200
+  [ CyberVitexus ]
+  * Added Install info  Added dependencies to javascript-common in
+    Debian package
+  * Added Install info  Added dependencies to javascript-common in
+    Debian package
+
+ -- CyberVitexus <vitex@exiv.jinonice.czf>  Mon, 02 Nov 2020 04:31:19 +0100

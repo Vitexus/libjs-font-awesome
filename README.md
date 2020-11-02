@@ -1,5 +1,5 @@
 libjs-font-awesome
-==========
+==================
 
 Transistional package for easy use of http://fontawesome.io/
 on Debian and firends.
@@ -15,9 +15,10 @@ Installation
 Make your own debian package build using libjs-font-awesome.sh script or install
 debian package by Vitex Software:
 
-    wget -O - http://v.s.cz/info@vitexsoftware.cz.gpg.key|sudo apt-key add -
-    echo deb http://v.s.cz/ stable main > /etc/apt/sources.list.d/ease.list
-    aptitude update
-    aptitude install libjs-font-awesome
-
-
+```shell
+sudo apt install lsb-release wget
+echo "deb http://repo.vitexsoftware.cz $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/vitexsoftware.list
+sudo wget -O /etc/apt/trusted.gpg.d/vitexsoftware.gpg http://repo.vitexsoftware.cz/keyring.gpg
+sudo apt update
+sudo apt install libjs-font-awesome
+```
