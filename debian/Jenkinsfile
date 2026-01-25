@@ -53,7 +53,7 @@ distributions.each { distro ->
                         sh """
                             dch -b -v ${buildVer} "${env.BUILD_TAG}"
                             sudo apt-get update --allow-releaseinfo-change
-                            sudo chown -R jenkins:jenkins .
+                            sudo chown -R jenkins:jenkins . ..
                             debuild-pbuilder -i -us -uc -b
                             mkdir -p \$WORKSPACE/dist/debian/
                             rm -rf \$WORKSPACE/dist/debian/*
