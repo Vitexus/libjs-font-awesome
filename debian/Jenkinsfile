@@ -54,8 +54,7 @@ distributions.each { distro ->
                             dch -b -v ${buildVer} "${env.BUILD_TAG}"
                             sudo apt-get update --allow-releaseinfo-change
                             sudo chown -R jenkins:jenkins . ..
-                            export FAKEROOTDONTTRYCHOWN=1
-                            debuild-pbuilder -i -us -uc -b
+                            debuild-pbuilder -r'sudo -E' -i -us -uc -b
                             mkdir -p \$WORKSPACE/dist/debian/
                             rm -rf \$WORKSPACE/dist/debian/*
                             for deb in \$(awk '{print \$1}' debian/files); do
