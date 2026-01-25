@@ -49,7 +49,7 @@ distributions.each { distro ->
                 }
 
                 stage("Build ${distro}") {
-                    buildImage.inside {
+                    buildImage.inside('--ipc=host') {
                         sh """
                             dch -b -v ${buildVer} "${env.BUILD_TAG}"
                             sudo apt-get update --allow-releaseinfo-change
@@ -69,7 +69,7 @@ distributions.each { distro ->
                 }
 
                 stage("Test ${distro}") {
-                    buildImage.inside {
+                    buildImage.inside('--ipc=host') {
                         def debconf_debug = 0
                         sh """
                             cd \$WORKSPACE/dist/debian/
@@ -98,7 +98,7 @@ distributions.each { distro ->
                 }
 
                 stage("Archive artifacts ${distro}") {
-                    buildImage.inside {
+                    buildImage.inside('--ipc=host') {
                         artifacts.each { deb_file ->
                             println "Archiving artifact: ${deb_file}"
                             archiveArtifacts artifacts: "dist/debian/${deb_file}"
